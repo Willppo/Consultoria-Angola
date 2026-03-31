@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  
+  --color-brand-red: #E63946;
+  --color-brand-red-dark: #A8222E;
+  --color-brand-red-light: #FAD2D6;
+  --color-brand-navy: #1A1A1A; /* Keeping a dark neutral for text contrast */
+  --color-brand-gold: #E63946; /* Mapping gold to red for consistency in components */
+  --color-brand-gold-light: #FAD2D6;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-white text-brand-navy selection:bg-brand-red/30;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
+}
+
+.section-padding {
+  @apply py-20;
+}
